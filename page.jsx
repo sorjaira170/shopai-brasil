@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { Mic, Camera, Search, CheckCircle, Smartphone, Shirt, Home, Sparkles } from 'lucide-react';
 
