@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import products from '../data/products.json';
-import { ShoppingBag, Search, Sparkles, ShoppingCart, X, Plus, Minus, Trash2 } from 'lucide-react';
+import { ShoppingBag, Search, Sparkles, ShoppingCart, X, Plus, Minus, Trash2, CreditCard } from 'lucide-react';
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -53,11 +53,23 @@ export default function Home() {
   const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
+  // Redireccionar al checkout de Mercado Pago
+  const handleCheckout = () => {
+    if (cart.length === 0) return;
+    
+    // Crear la descripción del pedido
+    const itemNames = cart.map(i => `${i.quantity}x ${i.title}`).join(', ');
+    const linkMercadoPago = `https://link.mercadopago.com.br`;
+
+    // Redireccionar directamente al panel de pago seguro
+    alert(`Pedido pronto! Total: R$ ${totalAmount.toFixed(2)}\n\nVocê será redirecionado para pagar via Pix ou Cartão no Mercado Pago.`);
+    window.location.href = linkMercadoPago;
+  };
+
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 relative overflow-x-hidden">
       {/* Header / Banner */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 shadow-lg text-center relative">
-        {/* Botón Carrito Flotante Top-Right */}
         <button
           onClick={() => setIsCartOpen(true)}
           className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-md text-white p-3 rounded-full flex items-center gap-2 transition-all shadow-md"
@@ -130,11 +142,10 @@ export default function Home() {
         )}
       </section>
 
-      {/* Carrito Lateral (Drawer Overlay) */}
+      {/* Carrito Lateral */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-sm">
-          <div className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between p-6 animate-in slide-in-from-right duration-300">
-            {/* Header Carrito */}
+          <div className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between p-6">
             <div>
               <div className="flex items-center justify-between border-b pb-4">
                 <h2 className="text-xl font-bold flex items-center gap-2 text-slate-800">
@@ -148,7 +159,6 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Lista de Productos no Carrito */}
               <div className="mt-4 overflow-y-auto max-h-[60vh] space-y-4">
                 {cart.length === 0 ? (
                   <p className="text-gray-500 text-center py-10">O seu carrinho está vazio.</p>
@@ -189,7 +199,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Footer Carrito / Resumen de Pago */}
             {cart.length > 0 && (
               <div className="border-t pt-4">
                 <div className="flex justify-between items-center mb-4">
@@ -199,10 +208,10 @@ export default function Home() {
                   </span>
                 </div>
                 <button 
-                  onClick={() => alert('Pronto você será redirecionado ao checkout do Mercado Pago!')}
+                  onClick={handleCheckout}
                   className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-colors shadow-lg"
                 >
-                  Finalizar Compra
+                  <CreditCard className="w-5 h-5" /> Pagar com Mercado Pago
                 </button>
               </div>
             )}
@@ -212,8 +221,19 @@ export default function Home() {
     </main>
   );
 }
-       
-  
+     
+        
+      
+        
+      
+                  
+                   
+        
+                 
+                      
+                          
+             
+             
        
         
                
