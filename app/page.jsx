@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import products from '../data/products.json';
+import products from '@/data/products.json';
 import { ShoppingBag, Search, Sparkles, ShoppingCart, X, Plus, Minus, Trash2, CreditCard } from 'lucide-react';
 
 export default function Home() {
