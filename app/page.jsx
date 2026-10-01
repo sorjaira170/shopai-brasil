@@ -49,26 +49,21 @@ export default function Home() {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
-  // Total a pagar
+  // Totales
   const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  // Redireccionar al checkout de Mercado Pago
+  // Redireccionar a Mercado Pago
   const handleCheckout = () => {
     if (cart.length === 0) return;
-    
-    // Crear la descripción del pedido
-    const itemNames = cart.map(i => `${i.quantity}x ${i.title}`).join(', ');
     const linkMercadoPago = `https://link.mercadopago.com.br`;
-
-    // Redireccionar directamente al panel de pago seguro
     alert(`Pedido pronto! Total: R$ ${totalAmount.toFixed(2)}\n\nVocê será redirecionado para pagar via Pix ou Cartão no Mercado Pago.`);
     window.location.href = linkMercadoPago;
   };
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 relative overflow-x-hidden">
-      {/* Header / Banner */}
+      {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 shadow-lg text-center relative">
         <button
           onClick={() => setIsCartOpen(true)}
@@ -100,7 +95,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Catálogo de Produtos */}
+      {/* Produtos */}
       <section className="max-w-6xl mx-auto py-10 px-4">
         <h2 className="text-2xl font-bold mb-6 text-slate-900 border-b pb-2">Produtos em Destaque</h2>
         
@@ -221,12 +216,8 @@ export default function Home() {
     </main>
   );
 }
-     
-        
-      
-        
-      
-                  
+
+              
                    
         
                  
