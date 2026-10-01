@@ -1,14 +1,21 @@
-import './globals.css';
-
-export const metadata = {
-  title: 'ShopAI Brasil',
-  description: 'A sua loja inteligente de ofertas',
-};
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="pt-BR">
-      <body>{children}</body>
-    </html>
-  );
+{
+  "name": "shopai-brasil",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "lucide-react": "^0.263.1",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
 }
