@@ -9,13 +9,13 @@ export default function Home() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Filtrar productos por búsqueda
+  // Filtrar productos
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Agregar producto al carrito
+  // Agregar al carrito
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existing = prevCart.find((item) => item.id === product.id);
@@ -29,7 +29,7 @@ export default function Home() {
     setIsCartOpen(true);
   };
 
-  // Cambiar cantidad de un ítem
+  // Actualizar cantidad
   const updateQuantity = (id, amount) => {
     setCart((prevCart) =>
       prevCart
@@ -44,16 +44,15 @@ export default function Home() {
     );
   };
 
-  // Eliminar ítem del carrito
+  // Eliminar producto
   const removeFromCart = (id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
 
-  // Totales
   const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  // Redireccionar a Mercado Pago
+  // Redirección a Mercado Pago
   const handleCheckout = () => {
     if (cart.length === 0) return;
     const linkMercadoPago = `https://link.mercadopago.com.br`;
@@ -95,7 +94,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Produtos */}
+      {/* Catálogo */}
       <section className="max-w-6xl mx-auto py-10 px-4">
         <h2 className="text-2xl font-bold mb-6 text-slate-900 border-b pb-2">Produtos em Destaque</h2>
         
@@ -216,6 +215,20 @@ export default function Home() {
     </main>
   );
 }
+     
+       
+    
+       
+                
+                      
+          
+
+              
+                        
+                          
+                      
+               
+ 
 
               
                    
