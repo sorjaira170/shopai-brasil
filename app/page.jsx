@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Mic, Camera, Search, CheckCircle, Smartphone, Shirt, Home, Sparkles } from 'lucide-react';
+import { Mic, Camera, CheckCircle, Smartphone, Shirt, Home, Sparkles } from 'lucide-react';
 
 export default function ShopAIBrasil() {
   const [query, setQuery] = useState('');
