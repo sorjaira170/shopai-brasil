@@ -9,13 +9,11 @@ export default function Home() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  // Filtrar productos
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Agregar al carrito
   const addToCart = (product) => {
     setCart((prevCart) => {
       const existing = prevCart.find((item) => item.id === product.id);
@@ -29,7 +27,6 @@ export default function Home() {
     setIsCartOpen(true);
   };
 
-  // Actualizar cantidad
   const updateQuantity = (id, amount) => {
     setCart((prevCart) =>
       prevCart
@@ -44,7 +41,6 @@ export default function Home() {
     );
   };
 
-  // Eliminar producto
   const removeFromCart = (id) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== id));
   };
@@ -52,7 +48,6 @@ export default function Home() {
   const totalAmount = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  // Redirección a Mercado Pago
   const handleCheckout = () => {
     if (cart.length === 0) return;
     const linkMercadoPago = `https://link.mercadopago.com.br`;
@@ -62,7 +57,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-800 relative overflow-x-hidden">
-      {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-12 px-4 shadow-lg text-center relative">
         <button
           onClick={() => setIsCartOpen(true)}
@@ -81,7 +75,6 @@ export default function Home() {
         </h1>
         <p className="mt-2 text-blue-100 text-lg">A sua loja inteligente de ofertas em Destaque</p>
         
-        {/* Buscador */}
         <div className="max-w-md mx-auto mt-6 relative">
           <input
             type="text"
@@ -94,7 +87,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Catálogo */}
       <section className="max-w-6xl mx-auto py-10 px-4">
         <h2 className="text-2xl font-bold mb-6 text-slate-900 border-b pb-2">Produtos em Destaque</h2>
         
@@ -136,7 +128,6 @@ export default function Home() {
         )}
       </section>
 
-      {/* Carrito Lateral */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-sm">
           <div className="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between p-6">
@@ -215,32 +206,3 @@ export default function Home() {
     </main>
   );
 }
-     
-       
-    
-       
-                
-                      
-          
-
-              
-                        
-                          
-                      
-               
- 
-
-              
-                   
-        
-                 
-                      
-                          
-             
-             
-       
-        
-               
-                
-            
-        
