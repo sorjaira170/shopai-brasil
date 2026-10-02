@@ -1,34 +1,74 @@
 [
   {
-    "id": "1",
-    "title": "Smartphone Samsung Galaxy S23 Ultra 256GB",
-    "price": 4899.00,
+    "id": 1,
+    "title": "Fone de Ouvido Bluetooth TWS Pro sem Fio",
+    "description": "Som HD de alta fidelidade, cancelamento de ruído e bateria de longa duração.",
+    "price": 49.90,
     "category": "Eletrônicos",
-    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&q=80",
-    "description": "Câmera de 200MP, Performance Snapdragon de última geração e Caneta S Pen inclusa."
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
   },
   {
-    "id": "2",
-    "title": "Fone de Ouvido Bluetooth Sony WH-1000XM5",
-    "price": 2199.90,
-    "category": "Áudio",
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80",
-    "description": "Cancelamento de ruído ativo líder de mercado e autonomia de bateria até 30h."
+    "id": 2,
+    "title": "Smartwatch Relógio Inteligente Fitness D20",
+    "description": "Monitoramento cardíaco, passos, notificações de redes sociais e à prova d'água.",
+    "price": 39.90,
+    "category": "Acessórios",
+    "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
   },
   {
-    "id": "3",
-    "title": "Smartwatch Apple Watch Series 9 GPS",
-    "price": 3299.00,
-    "category": "Wearables",
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&q=80",
-    "description": "Monitoramento avançado de saúde, tela Retina sempre ativa e comando por gestos."
+    "id": 3,
+    "title": "Mini Processador de Alimentos Elétrico USB",
+    "description": "Triture alho, pimenta e temperos em segundos. Prático, portátil e fácil de lavar.",
+    "price": 29.90,
+    "category": "Cozinha",
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
   },
   {
-    "id": "4",
-    "title": "Tênis Esportivo Nike Air Zoom",
-    "price": 599.90,
-    "category": "Moda",
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80",
-    "description": "Amortecimento leve e respirabilidade ideal para corridas e treinos."
+    "id": 4,
+    "title": "Luminária Projetor Galáxia Astronauta LED",
+    "description": "Transforme o quarto em um céu estrelado. Efeitos de nebulosa com controle remoto.",
+    "price": 89.90,
+    "category": "Casa & Decoração",
+    "image": "https://images.unsplash.com/photo-1507499739999-097706ad8914?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
+  },
+  {
+    "id": 5,
+    "title": "Umidificador de Ar Ultrassônico com LED RGB",
+    "description": "Aromaterapia e umidificação silenciosa para noites de sono mais tranquilas.",
+    "price": 34.90,
+    "category": "Casa",
+    "image": "https://images.unsplash.com/photo-1546554137-f86b9593a222?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
+  },
+  {
+    "id": 6,
+    "title": "Suporte Veicular Magnético para Celular",
+    "description": "Fixação ultra forte, rotação 360° para GPS no carro com máxima segurança.",
+    "price": 19.90,
+    "category": "Acessórios",
+    "image": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
+  },
+  {
+    "id": 7,
+    "title": "Copo Térmico de Inox com Tampa 473ml",
+    "description": "Mantenha sua bebida gelada por até 4 horas. Ideal para festas e dia a dia.",
+    "price": 45.00,
+    "category": "Cozinha",
+    "image": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
+  },
+  {
+    "id": 8,
+    "title": "Ring Light de Mesa com Tripé e Suporte Celular",
+    "description": "Iluminação profissional para vídeos do TikTok, Reels e fotos de maquiagem.",
+    "price": 59.90,
+    "category": "Eletrônicos",
+    "image": "https://images.unsplash.com/photo-1626218174358-7769486c4b79?w=500&q=80",
+    "link": "https://shopai-brasil.vercel.app"
   }
 ]
